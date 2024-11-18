@@ -14,6 +14,7 @@ public class Main {
 
         // Task 8: Test the updateEmail method
         p3.updateEmail("john.pork@gmail.com");
+        System.out.println(p3.getEmail());
     }
 }
 
