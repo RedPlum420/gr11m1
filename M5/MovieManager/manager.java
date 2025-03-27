@@ -223,7 +223,7 @@ class MovieManagementSystem extends JFrame {
             String searchedText = searchField.getText().toLowerCase().trim();
 
             for(String m : Main.movieList.keySet()){
-                if(Main.movieList.get(m).title.contains(searchedText))
+                if(Main.movieList.get(m).title.toLowerCase().trim()..contains(searchedText))
                 tableModel.addRow(new Object[]{Main.movieList.get(m).title, Main.movieList.get(m).genre});
             }
         }
