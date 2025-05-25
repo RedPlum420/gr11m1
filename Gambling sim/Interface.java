@@ -30,18 +30,18 @@ public class Interface extends JFrame {
     public Interface() {
         // Set up the JFrame
         setTitle("Gamba Simulator");
-        setSize(1000, 955); // Adjusted for the chart space and input fields
+        setSize(1000, 955); 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
         getContentPane().setBackground(BACKGROUND_COLOR);
 
-        // Create input panel
+        
         JPanel inputPanel = createInputPanel();
         //inputPanel.add(console);
         add(inputPanel, BorderLayout.NORTH);
 
 
-        // Create chart panel
+     
         chartPanel = new JPanel();
         chartPanel.setPreferredSize(new Dimension(1000, 500));
         chartPanel.setBackground(COLOR1);
@@ -57,7 +57,7 @@ public class Interface extends JFrame {
 
 
         add(console, BorderLayout.SOUTH);
-        // Display the frame
+     
         setVisible(true);
     }
 
@@ -95,7 +95,7 @@ public class Interface extends JFrame {
         JLabel cyclesLabel = new JLabel("Number of Cycles:");
         cyclesLabel.setForeground(Color.WHITE);
         cyclesField = new JTextField();
-        cyclesField.setPreferredSize(new Dimension(150, 50)); // Narrower and taller
+        cyclesField.setPreferredSize(new Dimension(150, 50)); 
         cyclesField.setBackground(COLOR2);
         cyclesField.setFont(new Font("Monospaced", Font.BOLD, 20));
         cyclesPanel.add(cyclesLabel, BorderLayout.WEST);
@@ -108,7 +108,7 @@ public class Interface extends JFrame {
         JLabel betLabel = new JLabel("Bet:    ");
         betLabel.setForeground(Color.WHITE);
         betField = new JTextField();
-        betField.setPreferredSize(new Dimension(150, 50)); // Narrower and taller
+        betField.setPreferredSize(new Dimension(150, 50));
         betField.setBackground(COLOR2);
         betField.setFont(new Font("Monospaced", Font.BOLD, 20));
         betPanel.add(betLabel, BorderLayout.WEST);
@@ -121,7 +121,7 @@ public class Interface extends JFrame {
         JLabel balanceLabel = new JLabel("Starting Balance:  ");
         balanceLabel.setForeground(Color.WHITE);
         balanceField = new JTextField();
-        balanceField.setPreferredSize(new Dimension(150, 50)); // Narrower and taller
+        balanceField.setPreferredSize(new Dimension(150, 50)); 
         balanceField.setBackground(COLOR2);
         balanceField.setFont(new Font("Monospaced", Font.BOLD, 20));
         balancePanel.add(balanceLabel, BorderLayout.WEST);
@@ -134,14 +134,13 @@ public class Interface extends JFrame {
         JLabel chosenNumberLabel = new JLabel("Num: ");
         chosenNumberLabel.setForeground(Color.WHITE);
         chosenNumberField = new JTextField();
-        chosenNumberField.setPreferredSize(new Dimension(150, 50)); // Narrower and taller
+        chosenNumberField.setPreferredSize(new Dimension(150, 50));
         chosenNumberField.setBackground(COLOR2);
         chosenNumberField.setFont(new Font("Monospaced", Font.BOLD, 20));
         chosenNumberPanel.add(chosenNumberLabel, BorderLayout.WEST);
         chosenNumberPanel.add(chosenNumberField, BorderLayout.CENTER);
         inputPanel.add(chosenNumberPanel);
 
-        // Toggle Button for Smaller/Larger
         JPanel togglePanel = new JPanel(new BorderLayout());
         togglePanel.setBackground(BACKGROUND_COLOR);
         toggleButton = new JToggleButton("Calculate One Player");
@@ -163,7 +162,7 @@ public class Interface extends JFrame {
         runSimButton = new JButton("RunSim");
         runSimButton.setBackground(COLOR4);
         runSimButton.setForeground(Color.WHITE);
-        runSimButton.setPreferredSize(new Dimension(500, 50)); // Size of the button
+        runSimButton.setPreferredSize(new Dimension(500, 50)); 
         runSimPanel.add(runSimButton, BorderLayout.EAST);
         inputPanel.add(runSimPanel);
 
